@@ -20,6 +20,7 @@ body {
     height: 160px;
     border-radius: 15px;
     border-bottom: 5px solid #CCC5B9;
+    font-size: 22px;
 }
 
 #information-container{
@@ -52,8 +53,9 @@ button {
     font-style: normal;
     background-color: #83e8ba;
     border-radius: 15px;
-    height: 40px;
+    height: 50px;
     color: white;
+    font-size: 18px;
 }
 
 button:hover{
@@ -63,10 +65,10 @@ button:hover{
 }
 
 input {
-    height: 40px;
+    height: 50px;
     border-radius: 15px;
     font-family: "Madimi One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 17px;
+    font-size: 18px;
 }
