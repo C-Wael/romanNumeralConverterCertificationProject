@@ -36,3 +36,10 @@ const convertNumber = (number) => {
     return result;
 
 }
+
+convertBtn.addEventListener("click", () => {
+    const input = parseInt(inputNumber.value); // Convertir l'entrée en nombre entier
+    const output = convertNumber(input); // Appeler la fonction de conversion
+    outputResult.textContent = output; // Afficher le résultat dans l'élément de sortie
+    outputResult.classList.remove("displayNone");
+});
