@@ -27,24 +27,28 @@ body {
     text-align: center;
     margin: auto;
     margin-top: 50px;
-    padding: 10px;
+    padding: 5px;
     background-color: #83e8ba;
     border-bottom: 5px solid #67a68a;
+    border-radius: 15px;
     color: white;
     font-size: 20px;
 }
 
-#output{
+#output {
+    color: black;
+    font-size: 50px;
+    text-align: center;
     margin: auto;
-    text-align: justify;
-    width: 500px;
-    height: 120px;
-    padding: 10px;
-    margin-top: 50px;
-    color: #FFFFFF;
-    background-color: #8338ec;
+    margin-top: 20px;
+    background-color: #83e8ba;
+    border: 5px solid #67a68a;
     border-radius: 15px;
-    border-bottom: 5px solid #b78df1;
+    width: 500px;
+}
+
+.displayNone{
+    display: none;
 }
 
 button {
