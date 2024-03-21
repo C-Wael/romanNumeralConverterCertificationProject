@@ -20,7 +20,19 @@ const convertNumber = (number) => {
         1000: "M"
     }
 
+    let result = "";
 
+    // Parcourir les clés de l'objet romanNumerals en ordre décroissant
+    Object.keys(romanNumerals).sort((a, b) => b - a).forEach(value => {
+        // Tant que le nombre en entrée est supérieur ou égal à la valeur actuelle
+        while (number >= value) {
+            // Ajouter le chiffre romain correspondant à la sortie
+            result += romanNumerals[value];
+            // Soustraire la valeur actuelle du nombre en entrée
+            number -= value;
+        }
+    });
+    
+    return result;
 
 }
-
