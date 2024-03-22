@@ -38,8 +38,18 @@ const convertNumber = (number) => {
 }
 
 convertBtn.addEventListener("click", () => {
-    const input = parseInt(inputNumber.value); // Convertir l'entrée en nombre entier
-    const output = convertNumber(input); // Appeler la fonction de conversion
-    outputResult.textContent = output; // Afficher le résultat dans l'élément de sortie
-    outputResult.classList.remove("displayNone");
+    outputResult.classList.remove("displayNone"); // Supprime la class displayNone de la div avec comme id output, fonction créée pour ne pas avoir de DRY.
+
+    // Conditions :
+    if (inputNumber.value === ""){
+        outputResult.innerHTML = "Please enter a valid number";
+    } else if (inputNumber.value <= 0) {
+        outputResult.innerHTML = "Please enter a number greater than or equal to 1";
+    } else if (inputNumber.value >= 4000) {
+        outputResult.innerHTML = "Please enter a number less than or equal to 3999"
+    } else {
+        const input = parseInt(inputNumber.value); // Convertir l'entrée en nombre entier
+        const output = convertNumber(input); // Appeler la fonction de conversion
+        outputResult.textContent = output; // Afficher le résultat dans l'élément de sortie
+    }
 });
