@@ -43,6 +43,8 @@ convertBtn.addEventListener("click", () => {
     // Conditions :
     if (inputNumber.value === ""){
         outputResult.innerHTML = "Please enter a valid number";
+    } else if (inputNumber.value <= 0) {
+        outputResult.innerHTML = "Please enter a number greater than or equal to 1";
     } else {
         const input = parseInt(inputNumber.value); // Convertir l'entrée en nombre entier
         const output = convertNumber(input); // Appeler la fonction de conversion
